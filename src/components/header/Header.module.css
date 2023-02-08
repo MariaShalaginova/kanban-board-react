@@ -1,0 +1,31 @@
+header {
+    height: 55px;
+    /* margin: 0 auto; */
+    background-color: #0067A3;
+    display: flex;
+    justify-content:space-between; 
+    align-items: center;
+    padding: 11px 20px 18px 20px;
+  }
+  
+  .logo {
+    font-size: 28px;
+    height: 33px;
+    color: white;
+  }
+  
+  .userMenu {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 1000px) {
+    header {
+      background-color: #0c88cf;
+      justify-content: right;
+    }
+  
+    .logo {
+      display: none;
+    }
+  }

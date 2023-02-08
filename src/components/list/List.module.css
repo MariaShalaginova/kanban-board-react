@@ -1,0 +1,66 @@
+.list {
+	width: 282px;
+	background: #EBECF0;
+	padding: 12px;
+	border-radius: 8px;
+	box-sizing: border-box;
+	margin: 24px;
+	box-shadow: 2px 2px 8px rgb(0 0 0 / 20%);
+    height: fit-content;
+}
+
+.listTitle {
+	margin-top: 0;
+}
+
+.task {
+	background: #FFFFFF;
+	color: #000000;
+	margin: 12px 0;
+	padding: 8px;
+	border-radius: 8px;
+}
+
+.task:hover {
+	text-decoration: underline;
+    cursor: pointer;
+}
+
+.taskLink {
+	text-decoration: none;
+}
+
+.addButton {
+	background: none;
+	border: none;
+	appearance: none;
+	font-size: 18px;
+	color: #5E6C84;
+	/* margin-top: 17px; */
+}
+
+.addButton:hover {
+	color: #000;
+    cursor: pointer;
+}
+
+.addButton:active:hover {
+    color:red;
+    cursor: pointer;
+}
+
+.addButton:disabled {
+    color: green;
+	cursor: none;
+	/* border: none;  */
+}
+/* 
+→ Если кнопка активна, её внешний вид должен соответствовать макету. 
+При наведении она должна подсвечиваться (менять цвет), 
+а курсор должен меняться на pointer.
+
+→ Если кнопка неактивна (назначен атрибут disabled), её цвет должен отличаться
+ от активного состояния, кнопка не должна реагировать на наведение курсора
+ (цвет остаётся таким же, не появляется курсор pointer). */
+
+

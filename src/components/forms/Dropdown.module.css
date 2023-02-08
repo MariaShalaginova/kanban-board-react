@@ -1,0 +1,13 @@
+/* не  отображаются стили. Можно использовать библиотеку MUI material ui */
+.select {
+	margin-top: 15px;
+	display: block;
+	/* flex-direction: column; */
+	padding: 5px 9px 5px 8px;
+	border-radius: 8px;
+	line-height: 2px;
+	border: none;
+	/* margin-bottom: 15px; */
+	font-size: 18px;
+	width: 100%;
+ }

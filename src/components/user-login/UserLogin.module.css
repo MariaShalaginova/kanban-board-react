@@ -1,0 +1,66 @@
+.userMenu {
+	display: flex;
+	position: relative;
+  }
+
+  .chevronOpen {
+	transform: rotate(180deg);
+  }
+  
+  .userMenuOpen {
+	background-color: white;
+	border-radius: 5px;
+	position: absolute;
+	top: 31px;
+	left: -70px;
+	padding: 11px 0 11px 8px;
+	width: 134px;
+  }
+  .userMenuOpen:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: -5px;
+	right: 40px;
+	border-style: solid;
+	border-width: 0 5px 5px 5px;
+	border-color: transparent transparent #ffffff transparent;
+  }
+  .userMenuOpen li {
+	color:black;
+	list-style: none;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .userMenuOpen li:hover {
+	color: #0067a3;
+	cursor: pointer;
+  }
+  .userMenuOpen li:not(:last-child) {
+	padding-bottom: 10px;
+  }
+  .userAvatar {
+	border-radius: 50%;
+  }
+  .userButton {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+  }
+  
+  @media only screen and (max-width: 1000px) {
+	.userMenu {
+	  padding: 10px 0;
+	}
+	.userMenuOpen {
+	  top: 39px;
+	  left: -66px;
+	}
+	.userAvatar {
+	  order: -1;
+	}
+	.chevron {
+	  margin-left: 6px;
+	}
+  }

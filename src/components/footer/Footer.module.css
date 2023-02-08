@@ -1,0 +1,36 @@
+footer {
+    display: flex;
+    min-height: 55px;
+    background-color: #0067A3;
+    justify-content: space-between;
+    padding-left: 21px;
+    padding-right: 21px;
+    color: white;
+    font-size: 18px;
+    align-items: center;
+  }
+
+  .tasksFooter {
+    display: flex;
+    justify-content: space-between;
+    width: 26%;
+  }
+
+.copy {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    /* margin-left: auto; */
+    align-items: center;
+}
+
+.copy a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  footer {
+    display: none;
+  }
+ }

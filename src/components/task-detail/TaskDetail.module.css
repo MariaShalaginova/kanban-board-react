@@ -1,0 +1,54 @@
+.wrapper {
+	background: #fff;
+	border-radius: 8px;
+	padding: 20px;
+	margin: 26px;
+	height: 548px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title {
+	margin: 0;
+}
+
+textarea {
+	Font-size: 18px;
+	/* Line-height: 21px; */
+	Line-height: 100%;
+	text-align: Left;
+	width: 50%;
+	Font-family: Roboto;
+	overflow: auto;
+    resize: none;
+    border: none;
+	height: 90%;
+	margin-top: 35px;
+	outline: none;
+	/* display: inline-table; */
+}
+
+.homeLink {
+	display: block;
+	margin: 20px 0;
+	text-decoration: none;
+	color: #737373;
+}
+
+.homeLink:hover {
+	color: #000;
+}
+
+@media screen and (max-width: 1000px) {
+	.wrapper {
+		margin-top: 80px;
+	}
+
+	textarea {
+		min-width: 90%;
+	}
+}

@@ -8,18 +8,14 @@ import DropdownForm from '../forms/Dropdown'
 const List = props => {
     const {title, type, tasks, addNewTask, blTasks, setTasks, allTasks} = props
     const [isFormVisible, setFormVisible] = useState(false)
-    //для нективной кнопки
-    //const [disabled,setDisabled] = useState(blTasks.length === 0) 
+
     
     // функция видимости формы добавления новой таски
     const handleClick = () => {
         setFormVisible(!isFormVisible)
     }
 
-    //функция активной/неактивной кнопки
-    // const disabledButton = () => {
-    //     setDisabled(!disabled)
-    // }
+
 
     return (
         <div className={css.list}>
@@ -31,16 +27,25 @@ const List = props => {
                     </Link>
                 )
             })}
-            {/* прорисовывание компонента добавления новой задачи в списке бэклог */}
+            {/* прорисовывание компоненты добавления новой задачи в списке бэклог */}
             {type === LIST_TYPES.BACKLOG && isFormVisible && (
                 <FormAddNewTask addNewTask={addNewTask} setFormVisible={setFormVisible} />
             )}
 
-            {/* {type === LIST_TYPES.READY && disabled &&
-                  (<button className={css.addButton} onClick={[handleClick, disabledButton] } disable={disabled}>+Add card</button>)
-            } */}
-
-           <button className={css.addButton} onClick={handleClick} style={{ display: !isFormVisible ? "block" : "none" }} >+ Add card</button>
+            {type === LIST_TYPES.BACKLOG &&
+                  (<button className={css.addButton} onClick={handleClick} style={{ display: !isFormVisible ? "block" : "none" }}>+Add card</button>)
+            }
+            {type === LIST_TYPES.READY &&
+                  (<button className={css.addButton} onClick={handleClick} disabled= {blTasks.length === 0 } style={{ display: !isFormVisible ? "block" : "none" }}>+Add card</button>)
+            }
+             {type === LIST_TYPES.IN_PROGRESS &&
+                  (<button className={css.addButton} onClick={handleClick} disabled= {blTasks.length === 0 } style={{ display: !isFormVisible ? "block" : "none" }}>+Add card</button>)
+            }
+            {type === LIST_TYPES.FINISHED &&
+                  (<button className={css.addButton} onClick={handleClick} disabled= {blTasks.length === 0 } style={{ display: !isFormVisible ? "block" : "none" }}>+Add card</button>)
+            }
+{/* 
+           <button className={css.addButton} onClick={handleClick} style={{ display: !isFormVisible ? "block" : "none" }} >+ Add card</button> */}
       {/* прорисовывание выпадаюищх списков тасок в других списках типов задач, кроме бэклога */}
            {type !== LIST_TYPES.BACKLOG && isFormVisible && (
                 <DropdownForm addNewTask={addNewTask} setFormVisible={setFormVisible} tasks={allTasks} type={type} setTasks={setTasks} />

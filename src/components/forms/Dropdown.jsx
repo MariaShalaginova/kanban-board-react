@@ -1,6 +1,5 @@
 import css from './Forms.module.css'
 import { LIST_TYPES } from '../../config'
-import data from "../../moch.json"
 import uniqid from 'uniqid'
 
 const DropdownForm = props => {
@@ -51,7 +50,7 @@ const DropdownForm = props => {
 
     return (
         <select className={css.select} defaultValue={'DEFAULT'} onChange={handleChange} >
-              <option selected="selected" value="DEFAULT">Choose the task</option>
+              <option  value="DEFAULT">Choose the task</option>
 	
                 {type === LIST_TYPES.READY ? backlogTasks.map(task =>
                  <option key={task.id} title={task.title} onClick={(e)=> onClick(e)} description={tasks.description}>{task.title}</option>): ""
